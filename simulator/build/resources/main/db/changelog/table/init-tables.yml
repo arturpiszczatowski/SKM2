@@ -1,0 +1,123 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2020_12_20-initial-tables
+      author: artur.piszczatowski
+      preConditions:
+        - onFail: MARK_RAN
+          not:
+            tableExists:
+              tableName: trains
+        - onFail: MARK_RAN
+          not:
+            tableExists:
+              tableName: compartments
+        - onFail: MARK_RAN
+          not:
+            tableExists:
+              tableName: stations
+      changes:
+        - createTable:
+            tableName: stations
+            columns:
+              - column:
+                  name: id
+                  type: INT
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: station_id_pkey
+              - column:
+                  name: stationname
+                  type: VARCHAR(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: pausetime
+                  type: INT
+                  constraints:
+                    nullable: false
+        - createTable:
+            tableName: trains
+            columns:
+              - column:
+                  name: id
+                  type: INT
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: train_id_pkey
+              - column:
+                  name: currentstation
+                  type: INT
+                  constraints:
+                    nullable: false
+                    foreignKeyName: train_station_id_fkey
+                    references: stations(id)
+              - column:
+                  name: direction
+                  type: INT
+                  constraints:
+                    nullable: false
+        - createTable:
+            tableName: compartments
+            columns:
+              - column:
+                  name: id
+                  type: INT
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: compartment_id_pkey
+              - column:
+                  name: capacity
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: occupants
+                  type: INT
+                  constraints:
+                    nullable: true
+              - column:
+                  name: train_id
+                  type: INT
+                  constraints:
+                    nullable: false
+                    foreignKeyName: compartment_train_id_fkey
+                    references: trains(id)
+        - createTable:
+            tableName: occupants
+            columns:
+              - column:
+                  name: id
+                  type: INT
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: occupant_id_pkey
+              - column:
+                  name: firstname
+                  type: VARCHAR(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: lastname
+                  type: VARCHAR(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: destination
+                  type: VARCHAR(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: compartment_id
+                  type: INT
+                  constraints:
+                    nullable: false
+                    foreignKeyName: coccupant_compartment_id_fkey
+                    references: compartments(id)

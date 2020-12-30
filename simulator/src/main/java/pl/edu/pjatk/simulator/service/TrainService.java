@@ -2,30 +2,44 @@ package pl.edu.pjatk.simulator.service;
 
 import org.springframework.stereotype.Service;
 import pl.edu.pjatk.simulator.model.Train;
+import pl.edu.pjatk.simulator.repository.CompartmentRepository;
+import pl.edu.pjatk.simulator.repository.StationRepository;
 import pl.edu.pjatk.simulator.repository.TrainRepository;
 
-import java.util.Collection;
+import java.util.Optional;
 
 @Service
-public class TrainService {
-    private final Collection<Train> trains;
+public class TrainService extends CrudService<Train>{
+    private CompartmentRepository compartmentRepository;
+    private StationRepository stationRepository;
 
-    public TrainService(TrainRepository repository) {
-        this.trains = repository.getAllTrains();
+    public TrainService(TrainRepository trainRepository, CompartmentRepository compartmentRepository, StationRepository stationRepository) {
+        super(trainRepository);
+        this.compartmentRepository = compartmentRepository;
+        this.stationRepository = stationRepository;
     }
 
-    public void moveTimeForward() {
-        trains.forEach(Train::move);
-    }
+    @Override
+    public Train createOrUpdate(Train updateEntity) {
 
-    public Collection<Train> getAll() {
-        return trains;
-    }
+        if(updateEntity.getId() == null) {
+            return repository.save(updateEntity);
+        }
 
-    public Train getById(Long id) {
-        return trains.stream()
-                .filter(i -> i.getId() == id)
-                .findFirst()
-                .orElse(null);
+        Optional<Train> presentEntity = repository.findById(updateEntity.getId());
+
+        if(presentEntity.isPresent()){
+            Train updateTrain = presentEntity.get();
+
+            updateTrain.setCompartments(updateTrain.getCompartments());
+            updateTrain.setCurrentStation(updateTrain.getCurrentStation());
+            updateTrain.setGoingToGdansk(updateTrain.isGoingToGdansk());
+
+            Train updatedTrain = repository.save(updateTrain);
+            return updatedTrain;
+        } else {
+            updateEntity = repository.save(updateEntity);
+            return updateEntity;
+        }
     }
 }

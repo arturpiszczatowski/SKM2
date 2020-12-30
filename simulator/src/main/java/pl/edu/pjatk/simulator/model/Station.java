@@ -1,29 +1,52 @@
 package pl.edu.pjatk.simulator.model;
 
-public enum Station {
-    GDYNIA_GLOWNA(2),
-    GDYNIA_SW_MAKSYMILIANA(0),
-    GDYNIA_REDLOWO(0),
-    GDYNIA_ORLOWO(0),
-    SOPOT_KAMIENNY_POTOK(0),
-    SOPOT(0),
-    SOPOT_WYSCIGI(0),
-    GDANSK_ZABIANKA(0),
-    GDANSK_OLIWA(0),
-    GDANSK_PRZYMORZE(0),
-    GDANSK_ZASPA(0),
-    GDANSK_WRZESZCZ(0),
-    GDANSK_POLITECHNIKA(0),
-    GDANSK_STOCZNIA(0),
-    GDANSK_GLOWNY(2);
+import pl.edu.pjatk.simulator.service.DbEntity;
 
-    private int pauseTime;
+import javax.persistence.*;
+import java.util.List;
 
-    Station(int pauseTime) {
-        this.pauseTime = pauseTime;
+@Entity
+@Table(name = "stations")
+public class Station implements DbEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "stationname")
+    private String name;
+
+    private int pausetime;
+
+    public int getPausetime() {
+        return pausetime;
     }
 
-    public int getPauseTime() {
-        return pauseTime;
+    @OneToMany
+    private List<Train> trains;
+
+    @Override
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<Train> getTrains() {
+        return trains;
+    }
+
+    public void setTrains(List<Train> trains) {
+        this.trains = trains;
     }
 }

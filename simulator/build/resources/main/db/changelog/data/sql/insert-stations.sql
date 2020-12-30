@@ -1,0 +1,15 @@
+INSERT INTO stations (stationname, pausetime) VALUES ('GDYNIA_GLOWNA', 2);
+INSERT INTO stations (stationname, pausetime) VALUES ('GDYNIA_WZGORZE_SWIETEGO_MAKSYMILIANA', 0);
+INSERT INTO stations (stationname, pausetime) VALUES ('GDYNIA_REDLOWO', 0);
+INSERT INTO stations (stationname, pausetime) VALUES ('GDYNIA_ORLOWO', 0);
+INSERT INTO stations (stationname, pausetime) VALUES ('SOPOT_KAMIENNY_POTOK', 0);
+INSERT INTO stations (stationname, pausetime) VALUES ('SOPOT', 0);
+INSERT INTO stations (stationname, pausetime) VALUES ('SOPOT_WYSCIGI', 0);
+INSERT INTO stations (stationname, pausetime) VALUES ('GDANSK_ZABIANKA-AWFIS', 0);
+INSERT INTO stations (stationname, pausetime) VALUES ('GDANSK_OLIWA', 0);
+INSERT INTO stations (stationname, pausetime) VALUES ('GDANSK_PRZYMORZE-UNIWERSYTET', 0);
+INSERT INTO stations (stationname, pausetime) VALUES ('GDANSK_ZASPA', 0);
+INSERT INTO stations (stationname, pausetime) VALUES ('GDANSK_WRZESZCZ', 0);
+INSERT INTO stations (stationname, pausetime) VALUES ('GDANSK_POLITECHNIKA', 0);
+INSERT INTO stations (stationname, pausetime) VALUES ('GDANSK_STOCZNIA', 0);
+INSERT INTO stations (stationname, pausetime) VALUES ('GDANSK_GLOWNY', 2);

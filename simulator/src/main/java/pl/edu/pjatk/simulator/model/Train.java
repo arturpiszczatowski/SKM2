@@ -1,51 +1,88 @@
 package pl.edu.pjatk.simulator.model;
 
-import pl.edu.pjatk.simulator.service.Identifiable;
+import pl.edu.pjatk.simulator.service.DbEntity;
 import pl.edu.pjatk.simulator.util.PersonGenerator;
 
-import java.util.Collection;
+import javax.persistence.*;
 import java.util.List;
 
-public class Train implements Identifiable {
-    private final int id;
-    private final List<Compartment> compartments;
-    private Station currentStation;
-    private boolean goingToGdansk;
-    private int currentPauseTime;
+@Entity
+@Table(name = "trains")
+public class Train implements DbEntity {
 
-    public Train(int id, List<Compartment> compartments, Station currentStation, boolean goingToGdansk) {
-        this.id = id;
-        this.compartments = compartments;
-        this.currentStation = currentStation;
-        this.goingToGdansk = goingToGdansk;
-        this.currentPauseTime = 0;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @OneToMany(mappedBy = "train", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private List<Compartment> compartments;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "station_id", referencedColumnName = "id")
+    private Station currentStation;
+
+    @Column(name = "direction")
+    private boolean goingToGdansk;
+
+    private int trainCurrentPauseTime;
+
+    public Train(){
+
     }
 
-    public Collection<Compartment> getCompartments() {
+    @Override
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public List<Compartment> getCompartments() {
         return compartments;
+    }
+
+    public void setCompartments(List<Compartment> compartments) {
+        this.compartments = compartments;
     }
 
     public Station getCurrentStation() {
         return currentStation;
     }
 
+    public void setCurrentStation(Station currentStation) {
+        this.currentStation = currentStation;
+    }
+
     public boolean isGoingToGdansk() {
         return goingToGdansk;
     }
 
+    public void setGoingToGdansk(boolean goingToGdansk) {
+        this.goingToGdansk = goingToGdansk;
+    }
+
     public int getCurrentPauseTime() {
-        return currentPauseTime;
+        return trainCurrentPauseTime;
+    }
+
+    public void setCurrentPauseTime() {
+        this.trainCurrentPauseTime = this.currentStation.getPausetime();
     }
 
     public void move() {
-        if (currentPauseTime > 0) {
-            currentPauseTime--;
+        if (getCurrentPauseTime() > 0) {
+            this.trainCurrentPauseTime--;
         } else {
             int nextStationModifier = goingToGdansk ? 1 : -1;
-            currentStation = Station.values()[currentStation.ordinal() + nextStationModifier];
-            currentPauseTime = currentStation.getPauseTime();
+            Long nextStationId = this.currentStation.getId() + nextStationModifier;
+            this.currentStation.setId(nextStationId);
+            setCurrentPauseTime();
 
-            if (currentStation.getPauseTime() > 0) {
+            trainCurrentPauseTime = getCurrentPauseTime();
+
+            if (trainCurrentPauseTime > 0) {
                 goingToGdansk = !goingToGdansk;
             }
 
@@ -55,10 +92,5 @@ public class Train implements Identifiable {
                 people.forEach(c::embark);
             });
         }
-    }
-
-    @Override
-    public long getId() {
-        return id;
     }
 }
