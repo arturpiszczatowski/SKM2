@@ -4,7 +4,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
-@ConfigurationProperties(prefix = "skm")
+@ConfigurationProperties(prefix = "skm2")
 public class TrainServiceConfiguration {
     private int numberOfTrains;
     private int numberOfCompartments;

@@ -27,7 +27,7 @@ public class Train implements DbEntity {
     private int trainCurrentPauseTime;
 
     public Train(){
-
+        setCurrentPauseTime();
     }
 
     @Override

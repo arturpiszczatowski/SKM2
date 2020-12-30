@@ -1,10 +1,10 @@
 SKMApplicationTest.java
  SKMApplicationTest
-TrainServiceTest.java
- TrainServiceTest
 SkmServiceTest.java
  SkmServiceTest
-TrainControllerTest.java
- TrainControllerTest
+TrainServiceTest.java
+ TrainServiceTest
 SkmControllerTest.java
  SkmControllerTest
+TrainControllerTest.java
+ TrainControllerTest
