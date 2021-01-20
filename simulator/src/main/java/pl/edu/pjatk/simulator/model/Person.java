@@ -17,6 +17,7 @@ public class Person {
     private String lastName;
 
     @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "station_id", referencedColumnName = "id")
     private Station destination;
 
     @ManyToOne(fetch = FetchType.EAGER)

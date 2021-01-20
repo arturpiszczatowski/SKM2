@@ -99,7 +99,7 @@ public class TrainController {
         return train -> {
             var payload = new LinkedHashMap<String, Object>();
             payload.put("id", train.getId());
-            payload.put("currentStation", train.getCurrentStation());
+            payload.put("currentStation", train.getCurrentStation().getName());
             payload.put("goingToGdansk", train.isGoingToGdansk());
             payload.put("currentPauseTime", train.getCurrentPauseTime());
             payload.put("compartmentIds", train.getCompartments().stream().map(Compartment::getId));

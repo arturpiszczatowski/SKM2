@@ -13,17 +13,17 @@ public class Station implements DbEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "stationname")
+    @Column(name = "station_name")
     private String name;
 
-    @Column(name = "pausetime")
+    @Column(name = "pause_time")
     private int pausetime;
 
     public int getPausetime() {
         return pausetime;
     }
 
-    @OneToMany
+    @OneToMany(mappedBy = "currentStation")
     private List<Train> trains;
 
     @Override

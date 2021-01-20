@@ -28,12 +28,12 @@ databaseChangeLog:
                     primaryKey: true
                     primaryKeyName: station_id_pkey
               - column:
-                  name: stationname
+                  name: station_name
                   type: VARCHAR(50)
                   constraints:
                     nullable: false
               - column:
-                  name: pausetime
+                  name: pause_time
                   type: INT
                   constraints:
                     nullable: false
@@ -49,7 +49,7 @@ databaseChangeLog:
                     primaryKey: true
                     primaryKeyName: train_id_pkey
               - column:
-                  name: currentstation
+                  name: station_id
                   type: INT
                   constraints:
                     nullable: false
@@ -61,7 +61,7 @@ databaseChangeLog:
                   constraints:
                     nullable: false
               - column:
-                  name: currentpausetime
+                  name: current_pause_time
                   type: INT
                   defaultValue: 0
                   constraints:
@@ -116,10 +116,12 @@ databaseChangeLog:
                   constraints:
                     nullable: false
               - column:
-                  name: destination
-                  type: VARCHAR(50)
+                  name: station_id
+                  type: INT
                   constraints:
                     nullable: false
+                    foreignKeyName: occupant_station_id_fkey
+                    references: stations(id)
               - column:
                   name: compartment_id
                   type: INT

@@ -17,7 +17,7 @@ public class PersonGenerator {
 
     public static Person generateNewPerson(Station station) {
         Name name = faker.name();
-        OptionalLong any = generator.longs(1,15).findAny();
+        OptionalLong any = generator.longs(0,14).findAny();
         Station destinationStationOrdinal = stationRepository.getOne(any.getAsLong());
 
         return new Person(name.firstName(), name.lastName(), destinationStationOrdinal);

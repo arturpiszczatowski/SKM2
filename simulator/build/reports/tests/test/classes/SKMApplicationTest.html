@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.236s</div>
+<div class="counter">0.009s</div>
 <p>duration</p>
 </div>
 </td>
@@ -82,7 +82,7 @@
 </thead>
 <tr>
 <td class="success">contextLoads()</td>
-<td class="success">0.236s</td>
+<td class="success">0.009s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -90,19 +90,10 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>21:03:45.430 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-21:03:45.446 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-21:03:45.479 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [SKMApplicationTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
-21:03:45.498 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [SKMApplicationTest], using SpringBootContextLoader
-21:03:45.502 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [SKMApplicationTest]: class path resource [SKMApplicationTest-context.xml] does not exist
-21:03:45.503 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [SKMApplicationTest]: class path resource [SKMApplicationTestContext.groovy] does not exist
-21:03:45.503 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [SKMApplicationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-21:03:45.559 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [SKMApplicationTest]
-21:03:45.718 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [SKMApplicationTest]: using defaults.
-21:03:45.718 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-21:03:45.738 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@58b578d8, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3c4b54a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@16341ceb, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4d51808c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3e515246, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1819ce23, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2efc4a8f, org.springframework.test.context.event.EventPublishingTestExecutionListener@6fe8ea3c, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5b1f56e5, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@d21f373, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@41c5786a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@69d4d364, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@485d08c5, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4a65d0d6]
-21:03:45.743 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@5b57e3d testClass = SKMApplicationTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@64a1c781 testClass = SKMApplicationTest, locations = '{}', classes = '{class pl.edu.pjatk.simulator.Application, class pl.edu.pjatk.simulator.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@10b80862, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@2f77d462, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@26a457c5, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@48316e58, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true]], class annotated with @DirtiesContext [false] with mode [null].
-21:03:45.784 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
+<pre>2021-01-20 22:48:07.757  INFO 11612 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [SKMApplicationTest], using SpringBootContextLoader
+2021-01-20 22:48:07.759  INFO 11612 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [SKMApplicationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-01-20 22:48:07.771  INFO 11612 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2021-01-20 22:48:07.773  INFO 11612 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7a2c544a, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1ddf9c11, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@485f13bb, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3207aab8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2a1126b6, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4b4f18f1, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7b3d08e8, org.springframework.test.context.event.EventPublishingTestExecutionListener@74603f5d, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@576783f1, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@645c917c, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@77b5bf57, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@25afc2b, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@69498f9a, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@699e24be]
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -112,39 +103,39 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.3.4.RELEASE)
 
-2021-01-20 21:03:46.109  INFO 8616 --- [    Test worker] SKMApplicationTest                       : Starting SKMApplicationTest on DESKTOP-T1RQ59H with PID 8616 (started by piszc in C:\Users\piszc\OneDrive\Desktop\SKM projekt\SKM\simulator)
-2021-01-20 21:03:46.111  INFO 8616 --- [    Test worker] SKMApplicationTest                       : No active profile set, falling back to default profiles: default
-2021-01-20 21:03:46.980  INFO 8616 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2021-01-20 21:03:47.096  INFO 8616 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94ms. Found 4 JPA repository interfaces.
-2021-01-20 21:03:47.706  INFO 8616 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-01-20 21:03:47.954  INFO 8616 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-01-20 21:03:48.428  INFO 8616 --- [    Test worker] liquibase.lockservice                    : Successfully acquired change log lock
-2021-01-20 21:03:48.823  INFO 8616 --- [    Test worker] liquibase.changelog                      : Creating database history table with name: PUBLIC.DATABASECHANGELOG
-2021-01-20 21:03:48.832  INFO 8616 --- [    Test worker] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
-2021-01-20 21:03:48.915  INFO 8616 --- [    Test worker] liquibase.changelog                      : Table stations created
-2021-01-20 21:03:48.927  INFO 8616 --- [    Test worker] liquibase.changelog                      : Table trains created
-2021-01-20 21:03:48.931  INFO 8616 --- [    Test worker] liquibase.changelog                      : Table compartments created
-2021-01-20 21:03:48.934  INFO 8616 --- [    Test worker] liquibase.changelog                      : Table occupants created
-2021-01-20 21:03:48.935  INFO 8616 --- [    Test worker] liquibase.changelog                      : ChangeSet db/changelog/table/init-tables.yml::2020_12_20-initial-tables::artur.piszczatowski ran successfully in 27ms
-2021-01-20 21:03:48.975  INFO 8616 --- [    Test worker] liquibase.changelog                      : SQL in file db/changelog/data/sql/insert-stations.sql executed
-2021-01-20 21:03:48.976  INFO 8616 --- [    Test worker] liquibase.changelog                      : ChangeSet db/changelog/data/init-data-insert-stations.yml::20201222::artur.piszczatowski ran successfully in 19ms
-2021-01-20 21:03:48.981  INFO 8616 --- [    Test worker] liquibase.changelog                      : SQL in file db/changelog/data/sql/insert-trains.sql executed
-2021-01-20 21:03:48.982  INFO 8616 --- [    Test worker] liquibase.changelog                      : ChangeSet db/changelog/data/init-data-insert-trains.yml::20201222::artur.piszczatowski ran successfully in 4ms
-2021-01-20 21:03:49.000  INFO 8616 --- [    Test worker] liquibase.changelog                      : SQL in file db/changelog/data/sql/insert-compartments.sql executed
-2021-01-20 21:03:49.002  INFO 8616 --- [    Test worker] liquibase.changelog                      : ChangeSet db/changelog/data/init-data-insert-compartments.yml::20201222::artur.piszczatowski ran successfully in 19ms
-2021-01-20 21:03:49.006  INFO 8616 --- [    Test worker] liquibase.lockservice                    : Successfully released change log lock
-2021-01-20 21:03:49.180  INFO 8616 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-01-20 21:03:49.290  INFO 8616 --- [         task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-01-20 21:03:49.389  INFO 8616 --- [         task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
-2021-01-20 21:03:49.670  WARN 8616 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-01-20 21:03:49.734  INFO 8616 --- [         task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2021-01-20 21:03:50.075  INFO 8616 --- [         task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2021-01-20 21:03:50.810  INFO 8616 --- [    Test worker] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2021-01-20 21:03:51.143  INFO 8616 --- [         task-1] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: pl.edu.pjatk.simulator.model.Person (class must be instantiated by Interceptor)
-2021-01-20 21:03:51.391  INFO 8616 --- [         task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-01-20 21:03:51.408  INFO 8616 --- [         task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-01-20 21:03:51.691  INFO 8616 --- [    Test worker] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2021-01-20 21:03:51.701  INFO 8616 --- [    Test worker] SKMApplicationTest                       : Started SKMApplicationTest in 5.904 seconds (JVM running for 7.151)
+2021-01-20 22:48:07.810  INFO 11612 --- [    Test worker] SKMApplicationTest                       : Starting SKMApplicationTest on DESKTOP-T1RQ59H with PID 11612 (started by piszc in C:\Users\piszc\OneDrive\Desktop\SKM projekt\SKM\simulator)
+2021-01-20 22:48:07.810  INFO 11612 --- [    Test worker] SKMApplicationTest                       : No active profile set, falling back to default profiles: default
+2021-01-20 22:48:08.322  INFO 11612 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-01-20 22:48:08.414  INFO 11612 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76ms. Found 4 JPA repository interfaces.
+2021-01-20 22:48:08.924  INFO 11612 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-01-20 22:48:09.177  INFO 11612 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-01-20 22:48:09.584  INFO 11612 --- [    Test worker] liquibase.lockservice                    : Successfully acquired change log lock
+2021-01-20 22:48:09.942  INFO 11612 --- [    Test worker] liquibase.changelog                      : Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2021-01-20 22:48:09.945  INFO 11612 --- [    Test worker] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2021-01-20 22:48:10.054  INFO 11612 --- [    Test worker] liquibase.changelog                      : Table stations created
+2021-01-20 22:48:10.064  INFO 11612 --- [    Test worker] liquibase.changelog                      : Table trains created
+2021-01-20 22:48:10.067  INFO 11612 --- [    Test worker] liquibase.changelog                      : Table compartments created
+2021-01-20 22:48:10.073  INFO 11612 --- [    Test worker] liquibase.changelog                      : Table occupants created
+2021-01-20 22:48:10.073  INFO 11612 --- [    Test worker] liquibase.changelog                      : ChangeSet db/changelog/table/init-tables.yml::2020_12_20-initial-tables::artur.piszczatowski ran successfully in 26ms
+2021-01-20 22:48:10.113  INFO 11612 --- [    Test worker] liquibase.changelog                      : SQL in file db/changelog/data/sql/insert-stations.sql executed
+2021-01-20 22:48:10.113  INFO 11612 --- [    Test worker] liquibase.changelog                      : ChangeSet db/changelog/data/init-data-insert-stations.yml::20201222::artur.piszczatowski ran successfully in 23ms
+2021-01-20 22:48:10.122  INFO 11612 --- [    Test worker] liquibase.changelog                      : SQL in file db/changelog/data/sql/insert-trains.sql executed
+2021-01-20 22:48:10.122  INFO 11612 --- [    Test worker] liquibase.changelog                      : ChangeSet db/changelog/data/init-data-insert-trains.yml::20201222::artur.piszczatowski ran successfully in 7ms
+2021-01-20 22:48:10.134  INFO 11612 --- [    Test worker] liquibase.changelog                      : SQL in file db/changelog/data/sql/insert-compartments.sql executed
+2021-01-20 22:48:10.135  INFO 11612 --- [    Test worker] liquibase.changelog                      : ChangeSet db/changelog/data/init-data-insert-compartments.yml::20201222::artur.piszczatowski ran successfully in 10ms
+2021-01-20 22:48:10.138  INFO 11612 --- [    Test worker] liquibase.lockservice                    : Successfully released change log lock
+2021-01-20 22:48:10.294  INFO 11612 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-20 22:48:10.415  INFO 11612 --- [         task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-20 22:48:10.515  INFO 11612 --- [         task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2021-01-20 22:48:10.597  INFO 11612 --- [         task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-01-20 22:48:10.736  WARN 11612 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-20 22:48:10.937  INFO 11612 --- [         task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-01-20 22:48:11.640  INFO 11612 --- [    Test worker] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2021-01-20 22:48:11.702  INFO 11612 --- [         task-1] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: pl.edu.pjatk.simulator.model.Person (class must be instantiated by Interceptor)
+2021-01-20 22:48:11.985  INFO 11612 --- [         task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-20 22:48:12.001  INFO 11612 --- [         task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-20 22:48:12.303  INFO 11612 --- [    Test worker] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2021-01-20 22:48:12.311  INFO 11612 --- [    Test worker] SKMApplicationTest                       : Started SKMApplicationTest in 4.534 seconds (JVM running for 7.812)
 </pre>
 </span>
 </div>
@@ -296,7 +287,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.7.1</a> at Jan 20, 2021, 9:03:52 PM</p>
+<a href="http://www.gradle.org">Gradle 6.7.1</a> at Jan 20, 2021, 10:48:12 PM</p>
 </div>
 </div>
 </body>
