@@ -60,6 +60,12 @@ databaseChangeLog:
                   type: INT
                   constraints:
                     nullable: false
+              - column:
+                  name: currentpausetime
+                  type: INT
+                  defaultValue: 0
+                  constraints:
+                    nullable: false
         - createTable:
             tableName: compartments
             columns:

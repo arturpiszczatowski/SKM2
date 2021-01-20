@@ -16,6 +16,7 @@ public class Station implements DbEntity {
     @Column(name = "stationname")
     private String name;
 
+    @Column(name = "pausetime")
     private int pausetime;
 
     public int getPausetime() {

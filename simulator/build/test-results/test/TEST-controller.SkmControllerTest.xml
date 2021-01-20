@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="controller.SkmControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-01-20T20:03:52" hostname="DESKTOP-T1RQ59H" time="0.078">
+  <properties/>
+  <testcase name="moveForward()" classname="controller.SkmControllerTest" time="0.078"/>
+  <system-out><![CDATA[2021-01-20 21:03:51.975  INFO 8616 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [controller.SkmControllerTest], using SpringBootContextLoader
+2021-01-20 21:03:51.976  INFO 8616 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [controller.SkmControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-01-20 21:03:51.987  INFO 8616 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2021-01-20 21:03:51.990  INFO 8616 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@57732b57, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7b19e4a3, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5e65930b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@48d9cab4, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6be696b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3236b9e3, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@40b98965, org.springframework.test.context.event.EventPublishingTestExecutionListener@463367ac, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@33b3ab30, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@34cdf504, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@38b3b059, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6560bee4, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4b246353, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@109adae6]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.3.4.RELEASE)
+
+2021-01-20 21:03:52.032  INFO 8616 --- [    Test worker] controller.SkmControllerTest             : Starting SkmControllerTest on DESKTOP-T1RQ59H with PID 8616 (started by piszc in C:\Users\piszc\OneDrive\Desktop\SKM projekt\SKM\simulator)
+2021-01-20 21:03:52.033  INFO 8616 --- [    Test worker] controller.SkmControllerTest             : No active profile set, falling back to default profiles: default
+2021-01-20 21:03:52.203  INFO 8616 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-01-20 21:03:52.203  INFO 8616 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-01-20 21:03:52.312  INFO 8616 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 109 ms
+2021-01-20 21:03:52.331  INFO 8616 --- [    Test worker] controller.SkmControllerTest             : Started SkmControllerTest in 0.337 seconds (JVM running for 7.781)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

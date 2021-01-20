@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="service.TrainServiceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-01-20T20:03:52" hostname="DESKTOP-T1RQ59H" time="0.059">
+  <properties/>
+  <testcase name="updateTrain()" classname="service.TrainServiceTest" time="0.049"/>
+  <testcase name="createNewTrainWithId()" classname="service.TrainServiceTest" time="0.004"/>
+  <testcase name="createNewTrainWithoutID()" classname="service.TrainServiceTest" time="0.004"/>
+  <system-out><![CDATA[2021-01-20 21:03:52.417  INFO 8616 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [service.TrainServiceTest], using SpringBootContextLoader
+2021-01-20 21:03:52.419  INFO 8616 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [service.TrainServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-01-20 21:03:52.423  INFO 8616 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2021-01-20 21:03:52.424  INFO 8616 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@40b87a17, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7293339c, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@770cba06, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2ae9c3e3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@29026c6b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@42e6a504, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@50a8fbd4, org.springframework.test.context.event.EventPublishingTestExecutionListener@343accf9, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@ee18f21, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7958c57c, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6eb9e7d8, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@c86a3f2, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@e1cadc4, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@31d0ea5e]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.3.4.RELEASE)
+
+2021-01-20 21:03:52.498  INFO 8616 --- [    Test worker] service.TrainServiceTest                 : Starting TrainServiceTest on DESKTOP-T1RQ59H with PID 8616 (started by piszc in C:\Users\piszc\OneDrive\Desktop\SKM projekt\SKM\simulator)
+2021-01-20 21:03:52.498  INFO 8616 --- [    Test worker] service.TrainServiceTest                 : No active profile set, falling back to default profiles: default
+2021-01-20 21:03:52.636  INFO 8616 --- [    Test worker] service.TrainServiceTest                 : Started TrainServiceTest in 0.204 seconds (JVM running for 8.086)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -24,10 +24,10 @@ public class Train implements DbEntity {
     @Column(name = "direction")
     private boolean goingToGdansk;
 
-    private int trainCurrentPauseTime;
+    @Column(name = "currentpausetime")
+    private int CurrentPauseTime;
 
     public Train(){
-        setCurrentPauseTime();
     }
 
     @Override
@@ -64,25 +64,25 @@ public class Train implements DbEntity {
     }
 
     public int getCurrentPauseTime() {
-        return trainCurrentPauseTime;
+        return CurrentPauseTime;
     }
 
-    public void setCurrentPauseTime() {
-        this.trainCurrentPauseTime = this.currentStation.getPausetime();
+    public void setCurrentPauseTime(int pauseTime) {
+        this.CurrentPauseTime = pauseTime;
     }
 
     public void move() {
         if (getCurrentPauseTime() > 0) {
-            this.trainCurrentPauseTime--;
+            this.CurrentPauseTime--;
         } else {
             int nextStationModifier = goingToGdansk ? 1 : -1;
             Long nextStationId = this.currentStation.getId() + nextStationModifier;
             this.currentStation.setId(nextStationId);
-            setCurrentPauseTime();
+            setCurrentPauseTime(this.currentStation.getPausetime());
 
-            trainCurrentPauseTime = getCurrentPauseTime();
+            CurrentPauseTime = getCurrentPauseTime();
 
-            if (trainCurrentPauseTime > 0) {
+            if (CurrentPauseTime > 0) {
                 goingToGdansk = !goingToGdansk;
             }
 
