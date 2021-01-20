@@ -30,6 +30,10 @@ public class Person {
         this.destination = destination;
     }
 
+    public Person(){
+
+    }
+
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }

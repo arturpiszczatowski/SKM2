@@ -1,5 +1,7 @@
 package pl.edu.pjatk.simulator.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import pl.edu.pjatk.simulator.repository.StationRepository;
 import pl.edu.pjatk.simulator.service.DbEntity;
 import pl.edu.pjatk.simulator.util.PersonGenerator;
 
@@ -71,26 +73,5 @@ public class Train implements DbEntity {
         this.currentPauseTime = pauseTime;
     }
 
-    public void move() {
-        if (getCurrentPauseTime() > 0) {
-            this.currentPauseTime--;
-        } else {
-            int nextStationModifier = goingToGdansk ? 1 : -1;
-            Long nextStationId = this.currentStation.getId() + nextStationModifier;
-            this.currentStation.setId(nextStationId);
-            setCurrentPauseTime(this.currentStation.getPausetime());
 
-            currentPauseTime = getCurrentPauseTime();
-
-            if (currentPauseTime > 0) {
-                goingToGdansk = !goingToGdansk;
-            }
-
-            compartments.forEach(c -> c.disembark(this.currentStation));
-            compartments.forEach(c -> {
-                List<Person> people = PersonGenerator.generatePeople(this.currentStation);
-                people.forEach(c::embark);
-            });
-        }
-    }
 }

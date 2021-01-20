@@ -1,5 +1,6 @@
 package pl.edu.pjatk.simulator.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import pl.edu.pjatk.simulator.repository.CompartmentRepository;
 import pl.edu.pjatk.simulator.service.Identifiable;
 
@@ -12,11 +13,10 @@ import java.util.stream.Collectors;
 @Entity
 @Table(name="compartments")
 public class Compartment implements Identifiable {
-    private static CompartmentRepository compartmentRepository;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     private int capacity;
 
@@ -31,7 +31,7 @@ public class Compartment implements Identifiable {
 
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -44,10 +44,11 @@ public class Compartment implements Identifiable {
     }
 
 
-    public void embark(Person person) {
+    public void embark(Person person, CompartmentRepository compartmentRepository) {
         if (occupants.size() < capacity) {
             occupants.add(person);
             person.setCompartment(compartmentRepository.getOne(getId()));
+
         }
     }
 
@@ -59,7 +60,7 @@ public class Compartment implements Identifiable {
         occupants.removeAll(leaving);
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

@@ -2,37 +2,37 @@ pl/edu/pjatk/simulator/service/TrainServiceConfiguration.java
  pl.edu.pjatk.simulator.service.TrainServiceConfiguration
 pl/edu/pjatk/simulator/Application.java
  pl.edu.pjatk.simulator.Application
+pl/edu/pjatk/simulator/model/Train.java
+ pl.edu.pjatk.simulator.model.Train
+pl/edu/pjatk/simulator/repository/PersonRepository.java
+ pl.edu.pjatk.simulator.repository.PersonRepository
 pl/edu/pjatk/simulator/service/Identifiable.java
  pl.edu.pjatk.simulator.service.Identifiable
 pl/edu/pjatk/simulator/repository/StationRepository.java
  pl.edu.pjatk.simulator.repository.StationRepository
-pl/edu/pjatk/simulator/controller/SkmController.java
- pl.edu.pjatk.simulator.controller.SkmController
-pl/edu/pjatk/simulator/repository/PersonRepository.java
- pl.edu.pjatk.simulator.repository.PersonRepository
 pl/edu/pjatk/simulator/repository/CompartmentRepository.java
  pl.edu.pjatk.simulator.repository.CompartmentRepository
 pl/edu/pjatk/simulator/repository/TrainRepository.java
  pl.edu.pjatk.simulator.repository.TrainRepository
 pl/edu/pjatk/simulator/service/DbEntity.java
  pl.edu.pjatk.simulator.service.DbEntity
-pl/edu/pjatk/simulator/controller/CrudController.java
- pl.edu.pjatk.simulator.controller.CrudController
+pl/edu/pjatk/simulator/model/Station.java
+ pl.edu.pjatk.simulator.model.Station
 pl/edu/pjatk/simulator/service/CrudService.java
  pl.edu.pjatk.simulator.service.CrudService
+pl/edu/pjatk/simulator/controller/CrudController.java
+ pl.edu.pjatk.simulator.controller.CrudController
 pl/edu/pjatk/simulator/service/TrainService.java
  pl.edu.pjatk.simulator.service.TrainService
-pl/edu/pjatk/simulator/model/Train.java
- pl.edu.pjatk.simulator.model.Train
+pl/edu/pjatk/simulator/controller/TrainController.java
+ pl.edu.pjatk.simulator.controller.TrainController
+pl/edu/pjatk/simulator/util/PersonGenerator.java
+ pl.edu.pjatk.simulator.util.PersonGenerator
 pl/edu/pjatk/simulator/model/Compartment.java
  pl.edu.pjatk.simulator.model.Compartment
 pl/edu/pjatk/simulator/model/Person.java
  pl.edu.pjatk.simulator.model.Person
+pl/edu/pjatk/simulator/controller/SkmController.java
+ pl.edu.pjatk.simulator.controller.SkmController
 pl/edu/pjatk/simulator/service/SkmService.java
  pl.edu.pjatk.simulator.service.SkmService
-pl/edu/pjatk/simulator/model/Station.java
- pl.edu.pjatk.simulator.model.Station
-pl/edu/pjatk/simulator/util/PersonGenerator.java
- pl.edu.pjatk.simulator.util.PersonGenerator
-pl/edu/pjatk/simulator/controller/TrainController.java
- pl.edu.pjatk.simulator.controller.TrainController
