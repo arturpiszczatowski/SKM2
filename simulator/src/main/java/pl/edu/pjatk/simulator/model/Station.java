@@ -50,4 +50,16 @@ public class Station implements DbEntity {
     public void setTrains(List<Train> trains) {
         this.trains = trains;
     }
+
+    public void setPausetime(int pausetime) { this.pausetime = pausetime;}
+
+    @Override
+    public String toString() {
+        return "Station{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", pausetime=" + pausetime +
+                ", trains=" + trains.toString() +
+                '}';
+    }
 }

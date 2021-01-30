@@ -39,30 +39,33 @@ public class SkmService {
     public void moveTimeForward() {
         List<Train> trains = trainService.getAll();
         trains.forEach(train -> {
+
+            Station currentStation = train.getCurrentStation();
             int currentPauseTime = train.getCurrentPauseTime();
+
             if (currentPauseTime > 0) {
-                currentPauseTime--;
+                train.setCurrentPauseTime(currentPauseTime-1);
             } else {
                 int nextStationModifier = train.isGoingToGdansk() ? 1 : -1;
-                Station currentStation = train.getCurrentStation();
+
                 Long newId = currentStation.getId() + nextStationModifier;
 
-                if(newId > 0)
+                if(newId > 0 && newId < 16) {
+                    train.setCurrentStation(stationRepository.getOne(newId));
+                    train.setCurrentPauseTime(train.getCurrentStation().getPausetime());
 
-                train.setCurrentStation(stationRepository.getOne(currentStation.getId() + nextStationModifier));
-
-                currentPauseTime = currentStation.getPausetime();
-
-                if(currentPauseTime > 0) {
-                    train.setGoingToGdansk(!train.isGoingToGdansk());
+//                    train.getCompartments().forEach(compartment -> compartment.disembark(currentStation));
+//                    train.getCompartments().forEach(compartment -> {
+//                        List<Person> people = PersonGenerator.generatePeople(currentStation, stationRepository);
+//                        people.forEach((person) -> compartment.embark(person, compartmentRepository));
+//                        personRepository.saveAll(people);
+//                    });
                 }
 
-                train.getCompartments().forEach(compartment -> compartment.disembark(currentStation));
-                train.getCompartments().forEach(compartment -> {
-                    List<Person> people = PersonGenerator.generatePeople(currentStation, stationRepository);
-                    people.forEach((person)->compartment.embark(person, compartmentRepository));
-                    //personRepository.saveAll(people);
-                });
+                currentPauseTime = train.getCurrentPauseTime();
+                if(currentPauseTime > 1) {
+                    train.setGoingToGdansk(!train.isGoingToGdansk());
+                }
             }
         });
         trainRepository.saveAll(trains);

@@ -1,9 +1,6 @@
 package pl.edu.pjatk.simulator.model;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import pl.edu.pjatk.simulator.repository.StationRepository;
 import pl.edu.pjatk.simulator.service.DbEntity;
-import pl.edu.pjatk.simulator.util.PersonGenerator;
 
 import javax.persistence.*;
 import java.util.List;
@@ -74,4 +71,14 @@ public class Train implements DbEntity {
     }
 
 
+    @Override
+    public String toString() {
+        return "Train{" +
+                "id=" + id +
+                ", compartments=" + compartments.toString() +
+                ", currentStation=" + currentStation.getName() +
+                ", goingToGdansk=" + goingToGdansk +
+                ", currentPauseTime=" + currentPauseTime +
+                '}';
+    }
 }

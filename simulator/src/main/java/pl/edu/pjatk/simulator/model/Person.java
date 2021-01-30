@@ -73,4 +73,14 @@ public class Person {
     public void setCompartment(Compartment compartment) {
         this.compartment = compartment;
     }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", destination=" + destination.getName() +
+                '}';
+    }
 }

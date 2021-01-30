@@ -43,20 +43,17 @@ public class Compartment implements Identifiable {
         return occupants;
     }
 
-
     public void embark(Person person, CompartmentRepository compartmentRepository) {
         if (occupants.size() < capacity) {
             occupants.add(person);
             person.setCompartment(compartmentRepository.getOne(getId()));
-
         }
     }
 
     public void disembark(Station station) {
         List<Person> leaving = occupants.stream()
-                .filter(p -> p.getDestination().equals(station.getName()))
+                .filter(p -> p.getDestination().equals(station))
                 .collect(Collectors.toList());
-
         occupants.removeAll(leaving);
     }
 
@@ -72,6 +69,13 @@ public class Compartment implements Identifiable {
         this.occupants = occupants;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Compartment{" +
+                "id=" + id +
+                ", capacity=" + capacity +
+                ", train=" + train.getId() +
+                ", occupants=" + occupants.toString() +
+                '}';
+    }
 }
