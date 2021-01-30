@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import pl.edu.pjatk.simulator.model.Compartment;
+import pl.edu.pjatk.simulator.model.Person;
 import pl.edu.pjatk.simulator.model.Train;
 import pl.edu.pjatk.simulator.service.TrainService;
 
@@ -58,7 +59,7 @@ public class TrainController {
         try {
             Collection<Compartment> all = trainService.getById(trainId).getCompartments();
             List<Map<String, Object>> payload = all.stream()
-                    .map(obj -> transformToCompartmentDTO().apply(obj))
+                    .map(compartment -> transformToCompartmentDTO().apply(compartment))
                     .collect(Collectors.toList());
 
             return new ResponseEntity<>(payload, HttpStatus.OK);
@@ -89,7 +90,7 @@ public class TrainController {
             payload.put("id", compartment.getId());
             payload.put("capacity", compartment.getCapacity());
             payload.put("spaceUsed", compartment.getOccupants().size());
-            payload.put("occupants", compartment.getOccupants());
+            payload.put("occupants", compartment.getOccupants().toString());
 
             return payload;
         };

@@ -54,12 +54,12 @@ public class SkmService {
                     train.setCurrentStation(stationRepository.getOne(newId));
                     train.setCurrentPauseTime(train.getCurrentStation().getPausetime());
 
-//                    train.getCompartments().forEach(compartment -> compartment.disembark(currentStation));
-//                    train.getCompartments().forEach(compartment -> {
-//                        List<Person> people = PersonGenerator.generatePeople(currentStation, stationRepository);
-//                        people.forEach((person) -> compartment.embark(person, compartmentRepository));
-//                        personRepository.saveAll(people);
-//                    });
+                    train.getCompartments().forEach(compartment -> compartment.disembark(currentStation));
+                    train.getCompartments().forEach(compartment -> {
+                        List<Person> people = PersonGenerator.generatePeople(currentStation, stationRepository);
+                        people.forEach((person) -> compartment.embark(person, compartmentRepository));
+                        personRepository.saveAll(people);
+                    });
                 }
 
                 currentPauseTime = train.getCurrentPauseTime();

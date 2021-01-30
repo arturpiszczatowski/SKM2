@@ -75,7 +75,7 @@ public class Compartment implements Identifiable {
                 "id=" + id +
                 ", capacity=" + capacity +
                 ", train=" + train.getId() +
-                ", occupants=" + occupants.toString() +
+                ", occupants=" + occupants +
                 '}';
     }
 }

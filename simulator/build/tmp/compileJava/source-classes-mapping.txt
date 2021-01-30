@@ -24,15 +24,15 @@ pl/edu/pjatk/simulator/service/TrainService.java
  pl.edu.pjatk.simulator.service.TrainService
 pl/edu/pjatk/simulator/model/Train.java
  pl.edu.pjatk.simulator.model.Train
+pl/edu/pjatk/simulator/controller/SkmController.java
+ pl.edu.pjatk.simulator.controller.SkmController
+pl/edu/pjatk/simulator/controller/TrainController.java
+ pl.edu.pjatk.simulator.controller.TrainController
 pl/edu/pjatk/simulator/model/Compartment.java
  pl.edu.pjatk.simulator.model.Compartment
 pl/edu/pjatk/simulator/model/Person.java
  pl.edu.pjatk.simulator.model.Person
-pl/edu/pjatk/simulator/controller/TrainController.java
- pl.edu.pjatk.simulator.controller.TrainController
-pl/edu/pjatk/simulator/util/PersonGenerator.java
- pl.edu.pjatk.simulator.util.PersonGenerator
-pl/edu/pjatk/simulator/controller/SkmController.java
- pl.edu.pjatk.simulator.controller.SkmController
 pl/edu/pjatk/simulator/service/SkmService.java
  pl.edu.pjatk.simulator.service.SkmService
+pl/edu/pjatk/simulator/util/PersonGenerator.java
+ pl.edu.pjatk.simulator.util.PersonGenerator
