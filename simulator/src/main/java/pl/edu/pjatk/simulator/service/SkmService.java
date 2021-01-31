@@ -13,6 +13,7 @@ import pl.edu.pjatk.simulator.repository.TrainRepository;
 import pl.edu.pjatk.simulator.util.PersonGenerator;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @ConfigurationProperties(prefix = "skm")
@@ -58,6 +59,7 @@ public class SkmService {
                     train.getCompartments().forEach(compartment -> {
                         List<Person> people = PersonGenerator.generatePeople(currentStation, stationRepository);
                         people.forEach((person) -> compartment.embark(person, compartmentRepository));
+                        people = people.stream().filter(person -> person.getCompartment() != null).collect(Collectors.toList());
                         personRepository.saveAll(people);
                     });
                 }

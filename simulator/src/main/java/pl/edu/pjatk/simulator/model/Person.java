@@ -21,7 +21,7 @@ public class Person {
     private Station destination;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "compartment_id", referencedColumnName = "id")
+    @JoinColumn(name = "compartment_id")
     private Compartment compartment;
 
     public Person(String firstName, String lastName, Station destination) {
