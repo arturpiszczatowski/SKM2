@@ -1,5 +1,6 @@
 package pl.edu.pjatk.simulator.controller;
 
+import org.junit.runner.RunWith;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import pl.edu.pjatk.simulator.model.Compartment;
 import pl.edu.pjatk.simulator.model.Person;
 import pl.edu.pjatk.simulator.model.Train;
+import pl.edu.pjatk.simulator.model.User;
 import pl.edu.pjatk.simulator.service.TrainService;
 
 import java.util.Collection;
@@ -48,9 +50,9 @@ public class TrainController {
             Train obj = trainService.getById(id);
             Map<String, Object> payload = transformToTrainDTO().apply(obj);
 
-            return new ResponseEntity<>(payload, HttpStatus.OK);
+            return new ResponseEntity<>(payload, HttpStatus.FOUND);
         } catch (Exception e) {
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
 
@@ -90,7 +92,7 @@ public class TrainController {
             payload.put("id", compartment.getId());
             payload.put("capacity", compartment.getCapacity());
             payload.put("spaceUsed", compartment.getOccupants().size());
-            payload.put("occupants", compartment.getOccupants().toString());
+            payload.put("occupants", compartment.getOccupants().stream().map(person -> transformToPersonDTO().apply(person)));
 
             return payload;
         };
@@ -107,5 +109,16 @@ public class TrainController {
 
             return payload;
         };
+    }
+        private Function<Person, Map<String, Object>> transformToPersonDTO() {
+            return person -> {
+                var payload = new LinkedHashMap<String, Object>();
+                payload.put("id", person.getId());
+                payload.put("firstname", person.getFirstName());
+                payload.put("lastname", person.getLastName());
+                payload.put("destination", person.getDestination().getName());
+
+                return payload;
+            };
     }
 }

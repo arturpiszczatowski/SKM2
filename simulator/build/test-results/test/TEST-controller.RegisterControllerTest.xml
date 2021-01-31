@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="controller.RegisterControllerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-01-31T21:31:29" hostname="DESKTOP-T1RQ59H" time="0.102">
+  <properties/>
+  <testcase name="addUserWithExistingUsername" classname="controller.RegisterControllerTest" time="0.09"/>
+  <testcase name="addUser" classname="controller.RegisterControllerTest" time="0.01"/>
+  <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.3.4.RELEASE)
+
+2021-01-31 22:31:29.140  INFO 5404 --- [    Test worker] controller.RegisterControllerTest        : Starting RegisterControllerTest on DESKTOP-T1RQ59H with PID 5404 (started by piszc in C:\Users\piszc\OneDrive\Desktop\SKM projekt\SKM\simulator)
+2021-01-31 22:31:29.140  INFO 5404 --- [    Test worker] controller.RegisterControllerTest        : No active profile set, falling back to default profiles: default
+2021-01-31 22:31:29.574  INFO 5404 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@44e51f3f, org.springframework.security.web.context.SecurityContextPersistenceFilter@21423860, org.springframework.security.web.header.HeaderWriterFilter@26e35c5a, org.springframework.security.web.authentication.logout.LogoutFilter@79033ce5, pl.edu.pjatk.simulator.security.TokenAuthenticationFilter@5c4d8333, pl.edu.pjatk.simulator.security.TokenAuthorizationFilter@71966c31, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@542e4d37, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6813da64, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@727d000d, org.springframework.security.web.session.SessionManagementFilter@6a597b36, org.springframework.security.web.access.ExceptionTranslationFilter@3f194007, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@46b8ba14]
+2021-01-31 22:31:29.717  INFO 5404 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-31 22:31:29.934  INFO 5404 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-01-31 22:31:29.934  INFO 5404 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-01-31 22:31:29.944  INFO 5404 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 10 ms
+2021-01-31 22:31:29.960  INFO 5404 --- [    Test worker] controller.RegisterControllerTest        : Started RegisterControllerTest in 0.874 seconds (JVM running for 11.379)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

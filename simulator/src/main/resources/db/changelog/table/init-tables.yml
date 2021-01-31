@@ -129,3 +129,37 @@ databaseChangeLog:
                     nullable: false
                     foreignKeyName: coccupant_compartment_id_fkey
                     references: compartments(id)
+  - changeSet:
+      id: 2021_01_30-security-tables
+      author: artur.piszczatowski
+      preConditions:
+        - onFail: MARK_RAN
+          not:
+            tableExists:
+              tableName: users
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  type: INT
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: user_id_pkey
+              - column:
+                  name: username
+                  type: VARCHAR(100)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: password
+                  type: VARCHAR(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: authority
+                  type: VARCHAR(100)

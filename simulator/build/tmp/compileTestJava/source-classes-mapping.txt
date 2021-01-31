@@ -1,8 +1,16 @@
+model/UserTest.java
+ model.UserTest
+service/UserServiceTest.java
+ service.UserServiceTest
 SKMApplicationTest.java
  SKMApplicationTest
+controller/TrainControllerTest.java
+ controller.TrainControllerTest
+controller/UserControllerTest.java
+ controller.UserControllerTest
 service/TrainServiceTest.java
  service.TrainServiceTest
+controller/RegisterControllerTest.java
+ controller.RegisterControllerTest
 controller/SkmControllerTest.java
  controller.SkmControllerTest
-service/SkmServiceTest.java
- service.SkmServiceTest

@@ -24,7 +24,7 @@ public class Compartment implements Identifiable {
     @JoinColumn(name = "train_id", referencedColumnName = "id")
     private Train train;
 
-    @OneToMany(mappedBy = "compartment", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "compartment", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private List<Person> occupants;
 
     public Compartment(){

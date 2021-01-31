@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - TrainControllerTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>TrainControllerTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/controller.html">controller</a> &gt; TrainControllerTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">3</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.173s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">getAllTrains()</td>
+<td class="success">0.025s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getTrainById()</td>
+<td class="success">0.066s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getTrainByIdIsNotFound()</td>
+<td class="success">0.082s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2021-01-31 22:31:22.669  INFO 5404 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [controller.TrainControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-01-31 22:31:22.682  INFO 5404 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2021-01-31 22:31:22.684  INFO 5404 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@57167d8c, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5e833068, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@49e729ee, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@198bb2c3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7d154663, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3a5229d9, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4a0acf24, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@ed3710c, org.springframework.test.context.event.EventPublishingTestExecutionListener@59a218eb, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@7295fee7, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6efa7c7e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7bb42bbc, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@32181161, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6f27b303, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@52032b15, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@8b00322]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.3.4.RELEASE)
+
+2021-01-31 22:31:22.733  INFO 5404 --- [    Test worker] controller.TrainControllerTest           : Starting TrainControllerTest on DESKTOP-T1RQ59H with PID 5404 (started by piszc in C:\Users\piszc\OneDrive\Desktop\SKM projekt\SKM\simulator)
+2021-01-31 22:31:22.734  INFO 5404 --- [    Test worker] controller.TrainControllerTest           : No active profile set, falling back to default profiles: default
+2021-01-31 22:31:23.465  INFO 5404 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-31 22:31:23.849  INFO 5404 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 619faff6-addf-486a-9efe-3e192e13ce49
+
+2021-01-31 22:31:23.994  INFO 5404 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@523ead30, org.springframework.security.web.context.SecurityContextPersistenceFilter@41eb4485, org.springframework.security.web.header.HeaderWriterFilter@2db8ae47, org.springframework.security.web.csrf.CsrfFilter@566f6f25, org.springframework.security.web.authentication.logout.LogoutFilter@6821ed8d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@66172c4a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6ab3447c, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@12d0accc, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@23be5b67, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6eeef634, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@64ca738, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4dfaa7a0, org.springframework.security.web.session.SessionManagementFilter@6cd0187d, org.springframework.security.web.access.ExceptionTranslationFilter@7caa701c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5202458e]
+2021-01-31 22:31:24.031  INFO 5404 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-01-31 22:31:24.032  INFO 5404 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-01-31 22:31:24.043  INFO 5404 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 11 ms
+2021-01-31 22:31:24.062  INFO 5404 --- [    Test worker] controller.TrainControllerTest           : Started TrainControllerTest in 1.372 seconds (JVM running for 5.481)
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 6.7.1</a> at Jan 31, 2021, 10:31:31 PM</p>
+</div>
+</div>
+</body>
+</html>
